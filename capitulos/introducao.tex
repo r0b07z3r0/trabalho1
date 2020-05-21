@@ -1,0 +1,59 @@
+%INTRODUCAO - TCC-1 ALEX SOARES DUARTE
+\chapter{Introdu\c{c}\~ao}
+%Focar em uma coisa mais geral
+
+
+%Falar sobre automacao industrial; sistemas de evento discreto; dificuldade de projeto
+%Falar que tem um grande problema
+
+
+%contextualizacao-1
+Estamos cercados de sistemas a eventos discretos (SEDs). Um sistema a eventos discretos \'e definido como um sistema cuja evolu\c{c}\~ao din\^amica depende da ocorr\^encia de eventos, os quais produzem as mudan\c{c}as de estado e, de modo geral, ocorrem em instantes de tempo irregulares \cite{Montgomery2004}. 
+
+Computadores, redes de comunica\c{c}\~oes, sistemas industriais automatizados, controle de tr\'afego a\'ereo s\~ao alguns exemplos de SEDs. Esses sistemas s\~ao modelados para que assim os usu\'arios possam, com o modelo, entender melhor o comportamento do sistema atrav\'es de an\'alises que os formalismos matem\'aticos proporcionam ao usu\'ario \cite{Wolfgang2013}.
+
+SEDs s\~ao sistemas modelados de tal sorte que os valores das vari\'aveis nos estados seguintes podem ser calculados diretamente a partir dos valores precedentes sem ter que considerar o tempo entre estes dois instantes \cite{Janette}.
+
+V\'arios formalismos matem\'aticos podem ser considerados na modelagem de SEDs; Redes de Petri (RdP), Cadeias de Markov, teoria de linguagens e aut\^omatos (m\'aquinas de estados finitos) s\~ao alguns exemplos. Entretanto, n\~ao h\'a um formalismo universal que solucione todos os problemas referentes aos SEDs \cite{Montgomery2004}. Esta proposta faz uso de dois formalismos: aut\^omatos e Redes de Petri.
+
+
+Um aut\^omato pode ser representado graficamente como o um grafo dirigido, onde os n\'os representam os estados e os arcos etiquetados representam as transi\c{c}\~oes entre os estados \cite{apostilacury}.
+
+Em Redes de Petri, os eventos s\~ao manipulados de acordo com certas regras semelhante aos aut\^omatos. Ela pode ser descrita graficamente e \'e composto por elementos estruturais; lugares, transi\c{c}\~oes, arcos e fichas \cite{Cassandras2008}. Seu grande diferencial fica por conta da an\'alise de suas propriedades, tais como: limitabilidade, quando o n\'umero de fichas em um lugar n\~ao exceda um n\'umero finito, alcan\c{c}abilidade, quando um dado estado \'e alcan\c{c}\'avel a partir de uma sequ\^encia de transi\c{c}\~oes, vivacidade, quando sempre existir ao menos uma transic{c}\~ao habilitada para disparo e evitando um estado de bloqueio, entre outras propriedades \cite{Cassandras2008}.
+
+O conjunto de marca\c{c}\~oes acess\'iveis de uma Rede de Petri marcada \'e o conjunto das marca\c{c}\~oes que podem ser atingidas a partir da marca\c{c}\~ao inicial atrav\'es de uma sequ\^encia de disparos, este pode ser representado atrav\'es de um aut\^omato (grafo de alcan\c{c}abilidade) que representa a Rede de Petri \cite{Janette}.
+
+Segundo \cite{Montgomery2004}, um problema de controle SEDs pode ser resolvido por meio da Teoria de Controle Supervis\'orio (TCS). A formula\c{c}\~ao de um problema de controle de SEDs \'e definida em tr\^es etapas: modelagem, especifica\c{c}\~ao de comportamento e s\'intese do supervisor. Modelagem \'e a etapa na qual se utiliza um formalismo para representar o SED, e que permite determinar seus estados e sua evolu\c{c}\~ao din\^amica. Especifica\c{c}\~ao de comportamento expressa, atrav\'es de um modelo formal, as tarefas que o sistema deve realizar para resultar em um comportamento desejado. A s\'intese do supervisor \'e uma l\'ogica de controle que soluciona o problema de controle, esse supervisor observa os eventos e define uma sequ\^encia de a\c{c}\~oes de controle que garante um comportamento especificado.
+
+Apesar do avan\c{c}o no desenvolvimento de ferramentas computacionais para manipula\c{c}\~ao dos formalismos citados, h\'a pouco uso destes modelos matem\'aticos na implanta\c{c}\~ao de controladores para SEDs.
+
+Este trabalho visa contribuir para que a implanta\c{c}\~ao de controladores baseados num modelo formal seja empregada para o controle de SEDs, partindo da l\'ogica sintetizada pela TCS, atrav\'es de uma interface para desenvolvimento de projetos de automa\c{c}\~ao que coverter\'a a modelagem em Redes de Petri em c\'odigos implement\'aveis para controladores l\'ogicos program\'aveis (CLP) ou FPGAs (\textit{Field Programmagle Gate Array}).
+
+A proposta est\'a organizada em sete cap\'itulos, incluindo esta introdu\c{c}\~ao. O segundo cap\'itulo retrata os problemas quanto ao uso de m\'etodos informais para o controle de SEDs. O terceiro cap\'itulo apresenta uma justificativa para o uso de m\'etodos formais para o desenvolvimento da l\'ogica de controle e tamb\'em para a cria\c{c}\~ao de uma ferramenta para gera\c{c}\~ao de c\'odigos implement\'aveis. O cap\'itulo quatro apresenta os objetivos desta proposta. O quinto cap\'itulo descreve a proposta para a solu\c{c}\~ao dos problemas apresentados. No cap\'itulo seis, a metodologia desta proposta \'e apresentada. O cronograma de atividades comp\~oe o s\'etimo cap\'itulo.
+
+%contextualizacao-2
+%Nesta proposta, \'e utilizado Redes de Petri, um dispositivo que manipula eventos de acordo com certas regras. Redes de Petri possui uma representa\c{c}\~ao gr\'afica que \'e intuitiva e reproduz muito da informa\c{c}\~ao estrutural do sistema \cite{Cassandras2008}. Em conjunto com Redes de Petri, a Teoria de Controle Supervis\'orio (TCS) desenvolvida por \cite{RW} \'e utilizada para a s\'intese de uma l\'ogica de controle \'otima.
+
+%De modo geral, o problema de controle de SEDs \'e resolvido por meio da TCS, gerando um supervisor que soluciona os problemas definindo a\c{c}\~oes de controle, atrav\'es da planta e das especifica\c{c}\~oes de comportamento \cite{Montgomery2004}.
+
+%Aqui um pouco do que é modelagem, linguagem e automatos
+%Autômato é um dispositivo para usado para representar sistemas de eventos discretos, como e 
+%Aqui vai um pouco de rede de petri para modelar esses sistemas
+
+
+
+%Aqui vai um pouco de Controle Supervisorio para modelar esses sistemas
+%Falar sobre UMDEES
+
+%O mix da RDP e Controle Supervisorio para desenvolver o meu trabalho
+
+%Este trabalho propo\~oe uma ferramenta para atuar como interface de desenvolvimento de projeto de controle de SEDs. Esta interface tem por objetivo auxiliar o uso da modelagem formal de um sistema convertendo o seu conte\'udo em c\'odigos implement\'aveis. Isto proporcionaria grande redu\c{c}\~ao de tempo de projeto, aumento de seguran\c{c}a e confiabilidade.
+
+%A proposta vem para contribuir com o desenvolvimento que se tem feito cerca da implanta\c{c}\~ao da modelagem de sistemas discretos em c\'odigos para equipamentos de controle e automa\c{c}\~ao program\'aveis. A ideia do trabalho \'e disponibilizar uma ferramenta computacional para preencher brecha entre teoria e aplica\c{c}\~ao.
+
+
+% qual a partir do documento do gráfico de alcançabilidade gerado pelo software TINA seja computado para um formato adequado para UMDEES 
+
+%-contextualização
+%-descrição da situação do documento
+%-inicia por que comecou até chegar ao meu trabalho
