@@ -1,0 +1,41 @@
+%PROBLEMA - ALEX SOARES DUARTE TCC-1
+\chapter{Problema}
+%Discutir da dificuldade de converter RDP em Codigo
+
+%Apesar, Embora, No entanto.
+%Grande avanço teórico
+%Falar do avanço teorico
+%Falar do pouco uso dos formalismos nas industrias, prática de campo, projetada usando intuitivo
+%Potencial de falhas
+%Citar casos notórios de falhas
+%Gap entre lógica de controle extraída e sintetizada e o código intuitivo, pratica ineficiencia. Falhas anunciadas
+
+Apesar do not\'avel desenvolvimento te\'orico da \'area de controle de sistemas a eventos discretos, h\'a uma car\^encia do uso da teoria de controle supervis\'orio em aplica\c{c}\~oes industriais \cite{queiroz2002}. Segundo \cite{fabian}, essa car\^encia se deve ao fato de que h\'a uma dificuldade em conciliar resultados da abordagem te\'orica com a implanta\c{c}\~ao f\'isica. Uma dessas dificuldades \'e deduzir, a partir de um aut\^omato com muitos estados, um c\'odigo para ser implementado.
+
+%Dificuldades da implantacao fisica
+No relat\'orio do "\textit{Workshop on Logic Control for Manufacturing Systems}" \space realizado em 2000 na Universidade de Michigan, \cite{workshop2000} descreve as barreiras para a implanta\c{c}\~ao dos resultados de pesquisa utilizando formalismos para l\'ogica de controle. Uma das principais barreiras \'e a falta de desenvolvimento de produtos comerciais que aplicam os novos conceitos de controle. A falta de conhecimento dos programadores sobre os formalismos para modelagem tamb\'em \'e uma das principais barreiras. Um outro obst\'aculo \'e a restri\c{c}\~ao do setor industrial para essas mudan\c{c}as. Incorporar uma nova tecnologia em um sistema pode ser arriscado,sem uma valida\c{c}\~ao adequada.
+
+%V\'arias metodologias, como a de \cite{leal2009} e \cite{hugomestrado}, atuam como diretrizes para a implanta\c{c}\~ao dos formalismos em c\'odigos para CLP e outros meios de controle, como por exemplo o FPGA. 
+
+Em \cite{lealqueiroz2017} se discute que no \^ambito industrial o desenvolvimento da l\'ogica de controle para um CLP \'e baseado em uma descri\c{c}\~ao informal resultando numa implementa\c{c}\~ao de solu\c{c}\~oes obtidas empiricamente.
+
+\cite{Litz2000} discute os inconvenientes da especifica\c{c}\~ao informal do controlador. Eles definem o termo "informal"\space como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente, de forma bem definida. %Os autores apontam que a especifica\c{c}\~ao informal consiste na descri\c{c}\~ao dos processos n\~ao control\'aveis e requerimentos para o sistema controlado.
+O principal problema com este tipo de abordagem informal \'e de n\~ao facilitar os testes de controle em sua completude, clareza e consist\^encia. Um estudo de pr\'aticas ind\'ustriais realizado por \cite{colla2006}, apontou que, em sua maioria, ind\'ustrias n\~ao  utilizam de nenhum m\'etodo ou ferramenta estruturada para o desenvolvimento de controle de sistemas industriais. O estudo tamb\'em revela que a pr\'atica mais usada se baseia na forma de narrativas, ignorando fases do projeto.
+
+\cite{hugomestrado} afirma que sem um m\'etodo formal de valida\c{c}\~ao um sistema pode alcan\c{c}ar um estado n\~ao validado com consequ\^encias imprevis\'iveis e potencialmente desastrosas. O mesmo autor cita que a falta desta valida\c{c}\~ao pode gerar viola\c{c}\~oes nas especifica\c{c}\~oes de funcionamento e de seguran\c{c}a do processo.
+
+%Falar o que 'e especificacao informal na introducao e defini-la como litz a define 
+
+%sem sentido segundo Vallim
+%A aplica\c{c}\~ao de um m\'etodo formal para a s\'intese do controlador \'e crucial devido a sua confiabilidade, seguran\c{c}a e redu\c{c}\~ao do tempo de desenvolvimento. Se tratando de ind\'ustrias onde o CLP \'e de grande import\^ancia, a lacuna entre o mundo da modelagem ass\'incrona e o mundo dos controladores l\'ogicos s\'incronos deve ser superada \cite{fabian}.
+
+%Em sua concep\c{c}~ao, Litz define o termo informal como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente de forma bem definida.
+Segundo "\textit{Petri Net Tools and Software}", um reposit\'orio de dados sobre softwares na \'area de Redes de Petri, h\'a poucas ferramentas capazes de gerar c\'odigos implement\'aveis e nenhuma combina Redes de Petri e Teoria de Controle Supervis\'orio. O foco deste trabalho contribui para redu\c{c}\~ao da lacuna entre teoria e pr\'atica na \'area de automa\c{c}\~ao apresentando uma proposta para automatiza\c{c}\~ao do processo de s\'intese de um c\'odigo que implemente uma l\'ogica de controle obtida a partir de um processo de s\'intese formal.
+
+%Desenvolver e implementar l\'ogica de controle para sistemas industriais automatizados n\~ao \'e uma tarefa trivial\cite{leal2009}. H\'a falta de um dispositivo que fa\c{c}a a verifica\c{c}\~ao das boas propriedades da modelagem usando Redes de Petri e a converte em c\'odigo implement\'avel impede um r\'apido avan\c{c}o da elabora\c{c}~ao da modelagem para a implanta\c{c}~ao. Quando se trabalha com sistemas reais de grandes propor\c{c}\~oes, alguns problemas aparecem, como por exemplo, grande n\'umero de estados\cite{leductese}. Um n\'umero demasiadamente grande de estados para a sintetiza\c{c}\~ao se torna invi\'avel caso este n\~ao seja feito de forma autom\'atica.
+
+
+%When working with large, real systems several problems quickly arise. The Ørstis \How does the DES plant model actually correspond to the real plant?" \How do events mapto actual occurrences in the plant, and in particular, how do controllable events and their disablemen  t actually translate to the real plant?" The second problem is the inhibiting eÆect of the combinatorial explosion for complex plants.  For realistic plants, the plant model can quickly become quite large (easily greater than 10 16  states) and thus exceed the capabilit y of current software.New metho ds to handle largemodelsmust be developed. 
+
+
+%Geord Frey e Lothar Litz discute os inconveniente da especifica\c{c}\~ao informal do controlador. Eles definem o termo "informal" como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente de forma bem definida. Os autores apontam que a especifica\c{c}\~ao informal consiste na descri\c{c}\~ao dos processos n\~ao control\'aveis e requerimentos para o sistema controlado. E o principal problema com este tipo de especifica\c{c}\~ao \'e de n\~ao facilitar os testes de controle em sua completude, clareza e consist\^encia \cite{Litz2000}.  
