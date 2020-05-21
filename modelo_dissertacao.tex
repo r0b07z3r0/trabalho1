@@ -1,17 +1,18 @@
 %% Exemplo de Utilizacao do Estilo de formatacao utfprcptex2  (http: )
-%% para elaboraÁ„o de Teses, DissertaÁıes, etc...
+%% para elabora√ß√£o de Teses, Disserta√ß√µes, etc...
 %% Autores: Rodrigo Rodrigues Sumar (sumar@utfpr.edu.br)
-%%          Bruno Augusto AngÈlico (bangelico@utfpr.edu.br)
+%%          Bruno Augusto Ang√©lico (bangelico@utfpr.edu.br)
 %% Colaboradores:
 %%
 %%
-\documentclass[oneside,       % para impress„o somente na frante. Oposto a twoside
-               openright,     % capÌtulos comeÁam em p·g Ìmpar (insere p·gina vazia caso preciso)
+\documentclass[oneside,       % para impress√£o somente na frante. Oposto a twoside
+               openright,     % cap√≠tulos come√ßam em p√°g √≠mpar (insere p√°gina vazia caso preciso)
                a4paper,       % tamanho do papel.
                12pt,          % tamanho da fonte
-               english,		  % idioma adicional para hifenizaÁ„o
-               spanish,		  % idioma adicional para hifenizaÁ„o
-               brazil		  % o ˙ltimo idioma È o principal do documento
+               english,		  % idioma adicional para hifeniza√ß√£o
+%               french,		  % idioma adicional para hifeniza√ß√£o
+               spanish,		  % idioma adicional para hifeniza√ß√£o
+               brazil		  % o √∫ltimo idioma √© o principal do documento
               ]{utfprcptex2}
 
 % ------
@@ -26,23 +27,23 @@
 
 
 % ---
-% Pacotes adicionais, usados apenas no ‚mbito do Modelo CanÙnico do abnteX2
+% Pacotes adicionais, usados apenas no √¢mbito do Modelo Can√¥nico do abnteX2
 % ---
-\usepackage{lipsum}				% para geraÁ„o de dummy text
+\usepackage{lipsum}				% para gera√ß√£o de dummy text
 % ---
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Ambientes para definiÁıes, exemplos e teoremas
+% Ambientes para defini√ß√µes, exemplos e teoremas
 \newtheorem{problema}{Problema}
-\newtheorem{definicao}{DefiniÁ„o}
-\newtheorem{proposicao}{ProposiÁ„o}
+\newtheorem{definicao}{Defini√ß√£o}
+\newtheorem{proposicao}{Proposi√ß√£o}
 \newtheorem{teorema}{Teorema}[chapter]
 \newtheorem{lema}{Lema}
-\newtheorem{corolario}{Corol·rio}
+\newtheorem{corolario}{Corol√°rio}
 \newtheorem{exemplo}{Exemplo}
-\newtheorem*{observacao}{ObservaÁ„o}
+\newtheorem*{observacao}{Observa√ß√£o}
 \newenvironment{prova}
-{\noindent {\textit{DemonstraÁ„o}.}} {{\par\hfill$\Box$ \\}}
+{\noindent {\textit{Demonstra√ß√£o}.}} {{\par\hfill$\Box$ \\}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Para fonte Times (Nimbus Roman) descomente linha abaixo
@@ -54,25 +55,33 @@
 
 
 
+%O comando a seguir diz ao Latex para salvar as siglas em um arquivo separado:
+%\fazlistasiglas[Lista de Siglas] % Par√¢metro opcional √© o t√≠tulo da lista.
+
+%%%% Ferramenta para cria√ß√£o de gloss√°rios
+%\makeglossaries%% N√£o comente esta linha se estivar usando glossario
+%\include{entradas_glossario}%% Entradas do gloss√°rio - Comente para remover este item
+%%%%
+
 % ---------- Preambulo ----------
 %%%%%%%% Dados para Capa e outros elementos pretextuais
 \instituicao{Universidade Tecnol\'ogica Federal do Paran\'a}
-%\unidade{C‚mpus CornÈlio ProcÛpio}
+%\unidade{C√¢mpus Corn√©lio Proc√≥pio}
 %\diretoria{Departamento acad\^emico de el\'etrica}
 \coordenacao{Departamento Acad\^emico de El\'etrica}
 \curso{Curso de Engenharia El\'etrica}
 \documento{Trabalho de Conclus\~ao de Curso 1}
 \nivel{Gradua\c{c}\~ao}
 \titulacao{Engenheiro Eletricista}
-\area{Engenharia ElÈtrica}
-\titulo{Proposta de conversor autom·tico de Redes de Petri em cÛdigos implement·veis para desenvolvimento de projetos de automa\c{c}\~ao} % titulo do trabalho em portuguÍs
-%\title{Title in English} % titulo do trabalho em inglÍs
+\area{Engenharia El√©trica}
+\titulo{Proposta de conversor autom√°tico de Redes de Petri em c√≥digos implement√°veis para desenvolvimento de projetos de automa\c{c}\~ao} % titulo do trabalho em portugu√™s
+%\title{Title in English} % titulo do trabalho em ingl√™s
 \autor{Alex Soares Duarte} % autor do trabalho
-\cita{DUARTE, Alex Soares} % sobrenome (mai˙sculas), nome do autor do trabalho
+\cita{DUARTE, Alex Soares} % sobrenome (mai√∫sculas), nome do autor do trabalho
 
 \palavraschave{Palavra-chave 1. Palavra-chave 2. (entre 3 e 5 palavras)} % palavras-chave do trabalho - Devem ser inseridas de 3 a 5 palavras chave
-\keywords{Keyword 1. Keyword 2. (entre 3 e 5 palavras)} % palavras-chave do trabalho em inglÍs - Devem ser inseridas de 3 a 5 palavras chave
-\comentario{\UTFPRdocumentodata\ apresentada ao \UTFPRcoordenacaodata\ da \UTFPRinstituicaodata\ como requisito parcial para obten\c{c}\~ao do tÌtulo de ``\UTFPRtitulacaodata''.}
+\keywords{Keyword 1. Keyword 2. (entre 3 e 5 palavras)} % palavras-chave do trabalho em ingl√™s - Devem ser inseridas de 3 a 5 palavras chave
+\comentario{\UTFPRdocumentodata\ apresentada ao \UTFPRcoordenacaodata\ da \UTFPRinstituicaodata\ como requisito parcial para obten\c{c}\~ao do t√≠tulo de ``\UTFPRtitulacaodata''.}
 
 
 %%%%%%%%%% Dados de Orientador e Coorientador
@@ -84,34 +93,36 @@
 %\coorientadorb{}	% este comando inclui o nome do 2o co-orientador
 
 \coordenadorUTFPR[Coordenadora]{Grau}{Nome do coordenador} % Coordenador do PPGEEL
-\local{CornÈlio ProcÛpio} % cidade
+\local{Corn√©lio Proc√≥pio} % cidade
 \data{\UTFPRanodefesa} % Aqui deve ir o ano da defesa.
 
-%%%% Dados para Folha de AprovaÁ„o%
+%%%% Dados para Folha de Aprova√ß√£o%
 \textoaprovacao{Esta \UTFPRdocumentodata\ foi julgada adequada para obten\c c\~ao do T\'itulo de ``\UTFPRtitulacaodata\ em \UTFPRareadata'' e aprovado em sua forma final pelo \UTFPRcoordenacaodata\ da \UTFPRinstituicaodata.}
-\numerodemembrosnabanca{5} % Isso decide se a lista de assinaturas ser· colocada em duas colunas
+\numerodemembrosnabanca{5} % Isso decide se a lista de assinaturas ser√° colocada em duas colunas
 \orientadornabanca{sim} % Se faz parte da banca definir como sim
 \coorientadornabanca{sim} % Se faz parte da banca definir como sim
-\primeiroassina[TÌtulo \\ Universidade]{Primeiro Membro da Banca}
-\segundoassina[TÌtulo \\Universidade]{Segundo Membro da Banca}
-\terceiroassina[TÌtulo \\Universidade]{Terceiro Membro da Banca}
-
-
+\primeiroassina[T√≠tulo \\ Universidade]{Primeiro Membro da Banca}
+\segundoassina[T√≠tulo \\Universidade]{Segundo Membro da Banca}
+\terceiroassina[T√≠tulo \\Universidade]{Terceiro Membro da Banca}
+%\quartoassina[T√≠tulo \\Universidade]{Quarto Membro da Banca}
+%\quintoassina[T√≠tulo \\Universidade]{Quinto Membro da Banca}
+%\sextoassina[T√≠tulo \\Universidade]{Sexto Membro da Banca}
+%\setimoassina[T√≠tulo \\Universidade]{S√©timo Membro da Banca}
 \datadefesaUTFPR{17}{11}{2017} %% A data deve ser inserida no formato dd/mm/aaaa
 %%%%% Comentar para versao impressa
-\versaoeletronica{``A Folha de AprovaÁ„o assinada encontra-se na CoordenaÁ„o do Curso do Programa''}% Texto a ser inserido na vers„o eletronica do documento.
+\versaoeletronica{``A Folha de Aprova√ß√£o assinada encontra-se na Coordena√ß√£o do Curso do Programa''}% Texto a ser inserido na vers√£o eletronica do documento.
 
 %---------- Inicio do Documento ----------
 \begin{document}
 %\hypersetup{pageanchor=false}
-\capa % geraÁ„o autom·tica da capa
+\capa % gera√ß√£o autom√°tica da capa
 \pretextual
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Geracao automatica da folha de rosto
-%%%% OpÁıes da Folha de Rosto
+%%%% Op√ß√µes da Folha de Rosto
 %%%%    - semficha
 %%%%    - comficha: modelo definido pela classe. Serve para contar paginas na
-%%%%                geraÁ„o da ficha pela biblioteca.
+%%%%                gera√ß√£o da ficha pela biblioteca.
 %%%%    - pdf: informar o nome do arquivo pdf com a ficha fornecinada
 %%%%           pela bibliteca.
 \folhaderosto
@@ -123,7 +134,7 @@
 %\include{errata}
 %%%
 
-%%%%% dedicatÛria (opcional)
+%%%%% dedicat√≥ria (opcional)
 %\begin{dedicatoria}
 %Texto da dedicat\'oria.
 %\end{dedicatoria}
@@ -145,7 +156,7 @@
 %
 %%%%% abstract em ingles
 %\begin{abstract}
-%SOBRENOME, Nome. \textbf{\UTFPRtitledata.} \UTFPRanodefesa. \pageref{LastPage} f. Master Thesis -- Electrical Engineering Graduate Program, Federal University of Technology - Paran·. CornÈlio ProcÛpio, \UTFPRdatadata.
+%SOBRENOME, Nome. \textbf{\UTFPRtitledata.} \UTFPRanodefesa. \pageref{LastPage} f. Master Thesis -- Electrical Engineering Graduate Program, Federal University of Technology - Paran√°. Corn√©lio Proc√≥pio, \UTFPRdatadata.
 
 %This is the english abstract. (maximum of 500 words).
 
@@ -154,35 +165,35 @@
 
 %%%%% abstract em frances
 %\begin{resume}
-%SOBRENOME, Nome. \textbf{Titre FranÁais.} \UTFPRanodefesa. \pageref{LastPage} f. MÈmoire de MaÓtrise -- Programme d'Ètudes SupÈrieures en GÈnie …lectrique, UniversitÈ Technologique FÈdÈrale - Paran·. CornÈlio ProcÛpio, \UTFPRdatadata.
+%SOBRENOME, Nome. \textbf{Titre Fran√ßais.} \UTFPRanodefesa. \pageref{LastPage} f. M√©moire de Ma√Ætrise -- Programme d'√©tudes Sup√©rieures en G√©nie √âlectrique, Universit√© Technologique F√©d√©rale - Paran√°. Corn√©lio Proc√≥pio, \UTFPRdatadata.
 
-%Il s'agit d'un rÈsumÈ en franÁais. (maximum de 500 mots).
+%Il s'agit d'un r√©sum√© en fran√ßais. (maximum de 500 mots).
 
-%\textbf{Mots-clÈs:} mot-clÈ 1. mot-clÈ 2. (3 ‡ 5 mots)
+%\textbf{Mots-cl√©s:} mot-cl√© 1. mot-cl√© 2. (3 √† 5 mots)
 %\end{resume}
 
-%%%%%% Lista de IlustraÁıes conforme ABNT
+%%%%%% Lista de Ilustra√ß√µes conforme ABNT
 %\listadeilustracoes
 %%% Para Gera lista individuais de comentar o comando acima e
 %%% descomentar das listas individuais
 %%%%%%%%%%%
 %%%% listas (opcionais, mas recomenda-se a partir de 5 elementos)
 %%%%
-\listadefiguras % geraÁ„o autom·tica da lista de figuras
-%\listadetabelas % geraÁ„o autom·tica da lista de tabelas
-\listadequadros % geraÁ„o autom·tica da lista de quadros
-%\listadegraficos % geraÁ„o autom·tica da lista de gr·ficos
-%\listadefotos % geraÁ„o autom·tica da lista de fotos
-%\listadefluxogramas % geraÁ„o autom·tica da lista de fluxogramas
-%\listadesiglas  % geraÁ„o autom·tica da lista de siglas
-%\listadeabreviaturas  % geraÁ„o autom·tica da lista de abreviaturas
-%\listadeacronimos   % geraÁ„o autom·tica da lista de acrÙnimos
-%\listadesimbolos % geraÁ„o autom·tica da lista de sÌmbolos
+\listadefiguras % gera√ß√£o autom√°tica da lista de figuras
+%\listadetabelas % gera√ß√£o autom√°tica da lista de tabelas
+\listadequadros % gera√ß√£o autom√°tica da lista de quadros
+%\listadegraficos % gera√ß√£o autom√°tica da lista de gr√°ficos
+%\listadefotos % gera√ß√£o autom√°tica da lista de fotos
+%\listadefluxogramas % gera√ß√£o autom√°tica da lista de fluxogramas
+%\listadesiglas  % gera√ß√£o autom√°tica da lista de siglas
+%\listadeabreviaturas  % gera√ß√£o autom√°tica da lista de abreviaturas
+%\listadeacronimos   % gera√ß√£o autom√°tica da lista de acr√¥nimos
+%\listadesimbolos % gera√ß√£o autom√°tica da lista de s√≠mbolos
 
 %\listofalgorithms %%%%% EM FASE DE TESTES
 
 % sumario
-\sumario % geraÁ„o autom·tica do sumario
+\sumario % gera√ß√£o autom√°tica do sumario
 
 %\cleardoublepage
 %\hypersetup{pageanchor=true}
@@ -190,27 +201,27 @@
 
 %---------- Inicio do Texto ----------
 % recomenda-se a escrita de cada capitulo em um arquivo texto separado (exemplo: intro.tex, fund.tex, exper.tex, concl.tex, etc.) e a posterior inclusao dos mesmos no mestre do documento utilizando o comando \input{}, da seguinte forma:
-\input{INTRODUCAO.tex}
-\input{PROBLEMA.tex}
-\input{JUSTIFICATIVA.tex}
-\input{OBJETIVOS.tex}
-\input{PROPOSTA.tex}
-\input{METODOLOGIA.tex}
-\input{CRONOGRAMA.tex}
+\input{capitulos/introducao.tex}
+\input{capitulos/problema.tex}
+\input{capitulos/justificativa.tex}
+\input{capitulos/objetivos.tex}
+\input{capitulos/proposta.tex}
+\input{capitulos/metodologia.tex}
+\input{capitulos/cronograma.tex}
 
 
 
-%% FormataÁ„o de p·ginas de elementos pÛs-textuais
-\postextual%% N„o comente esta linha
+%% Formata√ß√£o de p√°ginas de elementos p√≥s-textuais
+\postextual%% N√£o comente esta linha
 %---------- Referencias ----------
-%\bibliography{referencias/referencias} % geracao automatica das referencias a partir do arquivo reflatex.bib
+\bibliography{referencias/referencias} % geracao automatica das referencias a partir do arquivo reflatex.bib
 
-%% Gloss·rio
+%% Gloss√°rio
 %\incluirglossario%% Comente para remover este item
 
 %---------- Apendices (opcionais) ----------
 %\apendices
-% Imprime uma p·gina indicando o inÌcio dos apÍndices
+% Imprime uma p√°gina indicando o in√≠cio dos ap√™ndices
 %\partapendices*
 
 %\chapter{Nome do Ap\^endice}
@@ -218,11 +229,11 @@
 %Use o comando {\ttfamily \textbackslash apendice} e depois comandos {\ttfamily \textbackslash chapter\{\}}
 %para gerar t\'itulos de ap\^en-dices.
 
-%\section{Teste de SeÁ„o em um ApÍndice}
+%\section{Teste de Se√ß√£o em um Ap√™ndice}
 
 % ---------- Anexos (opcionais) ----------
 %\anexos
-% Imprime uma p·gina indicando o inÌcio dos anexos
+% Imprime uma p√°gina indicando o in√≠cio dos anexos
 %\partanexos*
 
 
