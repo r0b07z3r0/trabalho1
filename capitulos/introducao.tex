@@ -1,52 +1,40 @@
-%INTRODUCAO - TCC-1 ALEX SOARES DUARTE
+%INTRODUCAO - TCC-2 ALEX SOARES DUARTE
 \chapter{Introdu\c{c}\~ao}
 %Focar em uma coisa mais geral
 
 
 %Falar sobre automacao industrial; sistemas de evento discreto; dificuldade de projeto
 %Falar que tem um grande problema
-Teste
 
-
+\{c}
 %contextualizacao-1
+Este trabalho propr\~oe uma ferramenta digital para a convers\~ao de sistemas modelados em Redes de Petri para c\'odigos implement\'aveis em controladores industriais.
 Estamos cercados de sistemas a eventos discretos (SEDs). Um sistema a eventos discretos \'e definido como um sistema cuja evolu\c{c}\~ao din\^amica depende da ocorr\^encia de eventos, os quais produzem as mudan\c{c}as de estado e, de modo geral, ocorrem em instantes de tempo irregulares \cite{Montgomery2004}. 
 
 Computadores, redes de comunica\c{c}\~oes, sistemas industriais automatizados, controle de tr\'afego a\'ereo s\~ao alguns exemplos de SEDs. Esses sistemas s\~ao modelados para que assim os usu\'arios possam, com o modelo, entender melhor o comportamento do sistema atrav\'es de an\'alises que os formalismos matem\'aticos proporcionam ao usu\'ario \cite{Wolfgang2013}.
 
-SEDs s\~ao sistemas modelados de tal sorte que os valores das vari\'aveis nos estados seguintes podem ser calculados diretamente a partir dos valores precedentes sem ter que considerar o tempo entre estes dois instantes \cite{Janette}.
+%SEDs s\~ao sistemas modelados de tal sorte que os valores das vari\'aveis nos estados seguintes podem ser calculados diretamente a partir dos valores %precedentes sem ter que considerar o tempo entre estes dois instantes \cite{Janette}.
 
-V\'arios formalismos matem\'aticos podem ser considerados na modelagem de SEDs; Redes de Petri (RdP), Cadeias de Markov, teoria de linguagens e aut\^omatos (m\'aquinas de estados finitos) s\~ao alguns exemplos. Entretanto, n\~ao h\'a um formalismo universal que solucione todos os problemas referentes aos SEDs \cite{Montgomery2004}. Esta proposta faz uso de dois formalismos: aut\^omatos e Redes de Petri.
+V\'arios formalismos matem\'aticos podem ser considerados na modelagem de SEDs; Redes de Petri (RdP), Cadeias de Markov, teoria de linguagens e aut\^omatos (m\'aquinas de estados finitos) s\~ao alguns exemplos. Entretanto, n\~ao h\'a um formalismo universal que solucione todos os problemas referentes aos SEDs \cite{Montgomery2004}.
 
-
-Um aut\^omato pode ser representado graficamente como o um grafo dirigido, onde os n\'os representam os estados e os arcos etiquetados representam as transi\c{c}\~oes entre os estados \cite{apostilacury}.
+%Um aut\^omato pode ser representado graficamente como o um grafo dirigido, onde os n\'os representam os estados e os arcos etiquetados representam as transi\c{c}\~oes entre os estados \cite{apostilacury}.
 
 Em Redes de Petri, os eventos s\~ao manipulados de acordo com certas regras semelhante aos aut\^omatos. Ela pode ser descrita graficamente e \'e composto por elementos estruturais; lugares, transi\c{c}\~oes, arcos e fichas \cite{Cassandras2008}. Seu grande diferencial fica por conta da an\'alise de suas propriedades, tais como: limitabilidade, quando o n\'umero de fichas em um lugar n\~ao exceda um n\'umero finito, alcan\c{c}abilidade, quando um dado estado \'e alcan\c{c}\'avel a partir de uma sequ\^encia de transi\c{c}\~oes, vivacidade, quando sempre existir ao menos uma transic{c}\~ao habilitada para disparo e evitando um estado de bloqueio, entre outras propriedades \cite{Cassandras2008}.
 
-O conjunto de marca\c{c}\~oes acess\'iveis de uma Rede de Petri marcada \'e o conjunto das marca\c{c}\~oes que podem ser atingidas a partir da marca\c{c}\~ao inicial atrav\'es de uma sequ\^encia de disparos, este pode ser representado atrav\'es de um aut\^omato (grafo de alcan\c{c}abilidade) que representa a Rede de Petri \cite{Janette}.
+%O conjunto de marca\c{c}\~oes acess\'iveis de uma Rede de Petri marcada \'e o conjunto das marca\c{c}\~oes que podem ser atingidas a partir da marca\c{c}\~ao inicial atrav\'es de uma sequ\^encia de disparos, este pode ser representado atrav\'es de um aut\^omato (grafo de alcan\c{c}abilidade) que representa a Rede de Petri \cite{Janette}.
 
 Segundo \cite{Montgomery2004}, um problema de controle SEDs pode ser resolvido por meio da Teoria de Controle Supervis\'orio (TCS). A formula\c{c}\~ao de um problema de controle de SEDs \'e definida em tr\^es etapas: modelagem, especifica\c{c}\~ao de comportamento e s\'intese do supervisor. Modelagem \'e a etapa na qual se utiliza um formalismo para representar o SED, e que permite determinar seus estados e sua evolu\c{c}\~ao din\^amica. Especifica\c{c}\~ao de comportamento expressa, atrav\'es de um modelo formal, as tarefas que o sistema deve realizar para resultar em um comportamento desejado. A s\'intese do supervisor \'e uma l\'ogica de controle que soluciona o problema de controle, esse supervisor observa os eventos e define uma sequ\^encia de a\c{c}\~oes de controle que garante um comportamento especificado.
 
-Apesar do avan\c{c}o no desenvolvimento de ferramentas computacionais para manipula\c{c}\~ao dos formalismos citados, h\'a pouco uso destes modelos matem\'aticos na implanta\c{c}\~ao de controladores para SEDs.
+O acoplamento do supervisor gerado pela TCS e a RdP \'e foi introduzida por \cite{UzamWonham2005}. Esta metodologia \'e o ponto focal deste projeto, pois ela permite computar um modelo de RdP n\~ao bloqueante e limitado dado uma RdP n\~ao limitada e um conjunto de especifica\c{c}\~oes \cite{UzamWonham2005}
 
-Este trabalho visa contribuir para que a implanta\c{c}\~ao de controladores baseados num modelo formal seja empregada para o controle de SEDs, partindo da l\'ogica sintetizada pela TCS, atrav\'es de uma interface para desenvolvimento de projetos de automa\c{c}\~ao que coverter\'a a modelagem em Redes de Petri em c\'odigos implement\'aveis para controladores l\'ogicos program\'aveis (CLP) ou FPGAs (\textit{Field Programmagle Gate Array}).
 
-A proposta est\'a organizada em sete cap\'itulos, incluindo esta introdu\c{c}\~ao. O segundo cap\'itulo retrata os problemas quanto ao uso de m\'etodos informais para o controle de SEDs. O terceiro cap\'itulo apresenta uma justificativa para o uso de m\'etodos formais para o desenvolvimento da l\'ogica de controle e tamb\'em para a cria\c{c}\~ao de uma ferramenta para gera\c{c}\~ao de c\'odigos implement\'aveis. O cap\'itulo quatro apresenta os objetivos desta proposta. O quinto cap\'itulo descreve a proposta para a solu\c{c}\~ao dos problemas apresentados. No cap\'itulo seis, a metodologia desta proposta \'e apresentada. O cronograma de atividades comp\~oe o s\'etimo cap\'itulo.
-
-%contextualizacao-2
-%Nesta proposta, \'e utilizado Redes de Petri, um dispositivo que manipula eventos de acordo com certas regras. Redes de Petri possui uma representa\c{c}\~ao gr\'afica que \'e intuitiva e reproduz muito da informa\c{c}\~ao estrutural do sistema \cite{Cassandras2008}. Em conjunto com Redes de Petri, a Teoria de Controle Supervis\'orio (TCS) desenvolvida por \cite{RW} \'e utilizada para a s\'intese de uma l\'ogica de controle \'otima.
-
-%De modo geral, o problema de controle de SEDs \'e resolvido por meio da TCS, gerando um supervisor que soluciona os problemas definindo a\c{c}\~oes de controle, atrav\'es da planta e das especifica\c{c}\~oes de comportamento \cite{Montgomery2004}.
-
-%Aqui um pouco do que é modelagem, linguagem e automatos
-%Autômato é um dispositivo para usado para representar sistemas de eventos discretos, como e 
-%Aqui vai um pouco de rede de petri para modelar esses sistemas
+%Assuming  that  an  uncontrolled  bounded  Petri  net  (PN)model  of  a (plant)  DES and  a set of forbidden  state specifica-tions  are  given,  the  proposed  approach  computes  a  maximallypermissive and nonblocking closed-loop hybrid model.
 
 
 
-%Aqui vai um pouco de Controle Supervisorio para modelar esses sistemas
-%Falar sobre UMDEES
+%Este trabalho visa contribuir para que a implanta\c{c}\~ao de controladores baseados num modelo formal seja empregada para o controle de SEDs, partindo da l\'ogica sintetizada pela TCS, atrav\'es de uma interface para desenvolvimento de projetos de automa\c{c}\~ao que coverter\'a a modelagem em Redes de Petri em c\'odigos implement\'aveis para controladores l\'ogicos program\'aveis (CLP) ou FPGAs (\textit{Field Programmagle Gate Array}).
 
-%O mix da RDP e Controle Supervisorio para desenvolver o meu trabalho
+O trabalho est\'a organizado em seis cap\'itulos. Nesta introdu\c{c}~ao, se discute sobre a motiva\c{c}~ao e objetivos do projeo. O segundo e terceiro cap\'itulo se refere a fundamenta\c{c}~ao te\'orica de SEDs e Controladores Industriais. Em seguida, no quarto cap\'itulo, uma apresenta\c{c}~ao do algoritmo de convers\c{c}~ao e sua interface gr\'afica. E por fim, nos cap\'itulos cinco e seis, a valida\c{c}~ao da ferramenta e a conclus\~ao dos resultados obtidos.
 
 %Este trabalho propo\~oe uma ferramenta para atuar como interface de desenvolvimento de projeto de controle de SEDs. Esta interface tem por objetivo auxiliar o uso da modelagem formal de um sistema convertendo o seu conte\'udo em c\'odigos implement\'aveis. Isto proporcionaria grande redu\c{c}\~ao de tempo de projeto, aumento de seguran\c{c}a e confiabilidade.
 
@@ -58,3 +46,105 @@ A proposta est\'a organizada em sete cap\'itulos, incluindo esta introdu\c{c}\~a
 %-contextualização
 %-descrição da situação do documento
 %-inicia por que comecou até chegar ao meu trabalho
+
+
+%\section{Problema}
+
+%Discutir da dificuldade de converter RDP em Codigo
+
+%Apesar, Embora, No entanto.
+%Grande avanço teórico
+%Falar do avanço teorico
+%Falar do pouco uso dos formalismos nas industrias, prática de campo, projetada usando intuitivo
+%Potencial de falhas
+%Citar casos notórios de falhas
+%Gap entre lógica de controle extraída e sintetizada e o código intuitivo, pratica ineficiencia. Falhas anunciadas
+
+Apesar do not\'avel desenvolvimento te\'orico da \'area de controle de sistemas a eventos discretos, h\'a uma car\^encia do uso da teoria de controle supervis\'orio em aplica\c{c}\~oes industriais \cite{queiroz2002}. Segundo \cite{fabian}, essa car\^encia se deve ao fato de que h\'a uma dificuldade em conciliar resultados da abordagem te\'orica com a implanta\c{c}\~ao f\'isica. Uma dessas dificuldades \'e deduzir, a partir de um aut\^omato com muitos estados, um c\'odigo para ser implementado.
+
+%Dificuldades da implantacao fisica
+No relat\'orio do "\textit{Workshop on Logic Control for Manufacturing Systems}" \space realizado em 2000 na Universidade de Michigan, \cite{workshop2000} descreve as barreiras para a implanta\c{c}\~ao dos resultados de pesquisa utilizando formalismos para l\'ogica de controle. Uma das principais barreiras \'e a falta de desenvolvimento de produtos comerciais que aplicam os novos conceitos de controle. A falta de conhecimento dos programadores sobre os formalismos para modelagem tamb\'em \'e uma das principais barreiras. Um outro obst\'aculo \'e a restri\c{c}\~ao do setor industrial para essas mudan\c{c}as. Incorporar uma nova tecnologia em um sistema pode ser arriscado,sem uma valida\c{c}\~ao adequada.
+
+%V\'arias metodologias, como a de \cite{leal2009} e \cite{hugomestrado}, atuam como diretrizes para a implanta\c{c}\~ao dos formalismos em c\'odigos para CLP e outros meios de controle, como por exemplo o FPGA. 
+
+Em \cite{lealqueiroz2017} se discute que no \^ambito industrial o desenvolvimento da l\'ogica de controle para um CLP \'e baseado em uma descri\c{c}\~ao informal resultando numa implementa\c{c}\~ao de solu\c{c}\~oes obtidas empiricamente.
+
+\cite{Litz2000} discute os inconvenientes da especifica\c{c}\~ao informal do controlador. Eles definem o termo "informal"\space como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente, de forma bem definida. %Os autores apontam que a especifica\c{c}\~ao informal consiste na descri\c{c}\~ao dos processos n\~ao control\'aveis e requerimentos para o sistema controlado.
+O principal problema com este tipo de abordagem informal \'e de n\~ao facilitar os testes de controle em sua completude, clareza e consist\^encia. Um estudo de pr\'aticas ind\'ustriais realizado por \cite{colla2006}, apontou que, em sua maioria, ind\'ustrias n\~ao  utilizam de nenhum m\'etodo ou ferramenta estruturada para o desenvolvimento de controle de sistemas industriais. O estudo tamb\'em revela que a pr\'atica mais usada se baseia na forma de narrativas, ignorando fases do projeto.
+
+\cite{hugomestrado} afirma que sem um m\'etodo formal de valida\c{c}\~ao um sistema pode alcan\c{c}ar um estado n\~ao validado com consequ\^encias imprevis\'iveis e potencialmente desastrosas. O mesmo autor cita que a falta desta valida\c{c}\~ao pode gerar viola\c{c}\~oes nas especifica\c{c}\~oes de funcionamento e de seguran\c{c}a do processo.
+
+%Falar o que 'e especificacao informal na introducao e defini-la como litz a define 
+
+%sem sentido segundo Vallim
+%A aplica\c{c}\~ao de um m\'etodo formal para a s\'intese do controlador \'e crucial devido a sua confiabilidade, seguran\c{c}a e redu\c{c}\~ao do tempo de desenvolvimento. Se tratando de ind\'ustrias onde o CLP \'e de grande import\^ancia, a lacuna entre o mundo da modelagem ass\'incrona e o mundo dos controladores l\'ogicos s\'incronos deve ser superada \cite{fabian}.
+
+%Em sua concep\c{c}~ao, Litz define o termo informal como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente de forma bem definida.
+Segundo "\textit{Petri Net Tools and Software}", um reposit\'orio de dados sobre softwares na \'area de Redes de Petri, h\'a poucas ferramentas capazes de gerar c\'odigos implement\'aveis e nenhuma combina Redes de Petri e Teoria de Controle Supervis\'orio. O foco deste trabalho contribui para redu\c{c}\~ao da lacuna entre teoria e pr\'atica na \'area de automa\c{c}\~ao apresentando uma proposta para automatiza\c{c}\~ao do processo de s\'intese de um c\'odigo que implemente uma l\'ogica de controle obtida a partir de um processo de s\'intese formal.
+
+%Desenvolver e implementar l\'ogica de controle para sistemas industriais automatizados n\~ao \'e uma tarefa trivial\cite{leal2009}. H\'a falta de um dispositivo que fa\c{c}a a verifica\c{c}\~ao das boas propriedades da modelagem usando Redes de Petri e a converte em c\'odigo implement\'avel impede um r\'apido avan\c{c}o da elabora\c{c}~ao da modelagem para a implanta\c{c}~ao. Quando se trabalha com sistemas reais de grandes propor\c{c}\~oes, alguns problemas aparecem, como por exemplo, grande n\'umero de estados\cite{leductese}. Um n\'umero demasiadamente grande de estados para a sintetiza\c{c}\~ao se torna invi\'avel caso este n\~ao seja feito de forma autom\'atica.
+
+
+%When working with large, real systems several problems quickly arise. The Ørstis \How does the DES plant model actually correspond to the real plant?" \How do events mapto actual occurrences in the plant, and in particular, how do controllable events and their disablemen  t actually translate to the real plant?" The second problem is the inhibiting eÆect of the combinatorial explosion for complex plants.  For realistic plants, the plant model can quickly become quite large (easily greater than 10 16  states) and thus exceed the capabilit y of current software.New metho ds to handle largemodelsmust be developed. 
+
+
+%Geord Frey e Lothar Litz discute os inconveniente da especifica\c{c}\~ao informal do controlador. Eles definem o termo "informal" como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente de forma bem definida. Os autores apontam que a especifica\c{c}\~ao informal consiste na descri\c{c}\~ao dos processos n\~ao control\'aveis e requerimentos para o sistema controlado. E o principal problema com este tipo de especifica\c{c}\~ao \'e de n\~ao facilitar os testes de controle em sua completude, clareza e consist\^encia \cite{Litz2000}.  
+
+
+%\section{Justificativa}
+
+%Qual 'e a vantagem de ter isso
+%Aproveitamento da teoria para projetos no campo
+%Significa mais eficiencia e reducao de tempo
+%Maior qualidade de controle e confiabilidade
+%Diminuir riscos
+
+A Teoria de Controle Supervis\'orio \'e uma ferramenta apropriada para a s\'intese da l\'ogica de controle para sistemas automatizados \cite{leal2009}. Os mesmos autores confirmam que a TCS garante o alcance de uma l\'ogica de controle \'otima, isto \'e, uma l\'ogica minimamente restritiva e sem bloqueios que atenda as especifica\c{c}\~oes de controle.
+
+As Redes de Petri s\~ao adequadas para a modelagem de controladores de sistemas de automa\c{c}\~ao \cite{gomes2007}. A RdP possui vizualiza\c{c}\~ao gr\'afica, o que permite uma sintaxe e sem\^antica bem definida, como tamb\'em a modelagem concorrente e s\'incrona expl\'icita e leg\'ivel.
+
+Segundo \cite{Litz2000} h\'a v\'arias raz\~oes para a aplica\c{c}\~ao de m\'etodos formais. As principais raz\~oes s\~ao: aumento da complexidade de problemas, demanda por redu\c{c}\~ao do tempo de desenvolvimento, demanda por maior qualidade e demanda por confiabilidade dos sistemas.
+
+Em rela\c{c}\~ao \`a gera\c{c}\~ao autom\'atica de c\'odigos, o relat\'orio do "\textit{Workshop on Logic Control for Manufacturing Systems}" \space aponta que os t\'opicos para pesquisas futuras incluem o aprimoramento de programas para projetos de l\'ogica de controle e implementação atrav\'es de diagn\'osticos integrados. Como tamb\'em melhoria em inferfaces homem-m\'aquina e gera\c{c}\~ao autom\'atica de c\'odigos \cite{workshop2000}. \cite{karenides} cita que estudantes que desenvolvem pesquisa em SEDs desejam que um software de modelagem contenha um gerador e executor autom\'atico de c\'odigos, e que este proporcione uma interface entre software, hardware e a implementa\c{c}\~ao do controlador.
+
+ Este trabalho visa preencher a lacuna entre teoria e implementa\c{c}\~ao com uma ferramenta computacional para gerar c\'odigos para sistemas baseados em CLPs e FPGAs. Atrav\'es de uma interface intuitiva ser\'a poss\'ivel modelar controladores de forma eficiente, utilizando os formalismos para garantir solu\c{c}\~ao \'otima em curto prazo de tempo com a gera\c{c}\~ao autom\'atica de c\'odigos implement\'aveis. O desenvolvimento de uma interface com as caracter\'isticas anunciadas anteriormente resultaria em um aumento da utiliza\c{c}\~ao de t\'ecnicas formais para a s\'intese de controle, o que levaria ao aumento da qualidade dos sistemas de automa\c{c}\~ao, com redu\c{c}\~ao de falhas e aumento da confiabilidade em seguran\c{c}a e desempenho.
+ 
+ %resulta em uma pr\'atica industrial veloz e segura.
+
+%A gera\c{c}\~ao autom\'atica de c\'odigo aumentaria a utiliza\c{c}\~ao de t\'ecnicas formais de s\'intese de controle. O uso de t\'ecnicas formais levaria ao aumento da qualidade dos sistemas de automa\c{c}\~ao, com redu\c{c}\~ao de falhas e aumento de confiabilidade e seguran\c{c}a.
+
+
+%Em um controlador baseado em Redes de Petri que sintet\'iza a teoria de controle supervis\'orio, o primeiro passo \'e a modelagem da planta e da especifica\c{c}\~ao e depois \'e feita a composi\c{c}\~ao s\'incrona entre os modelos para obter o modelo do control\'avel e h\'a v\'arias maneiras de resolver esse problema \cite{dideban2011}. O diferencial deste trabalho est\'a na possibilidade de sintetizar este controlador de forma autom\'atica seguindo certas regras abordadas pela metodologia.
+
+
+%In PN-based controller synthesizes using SCT framework, the first  step  is  the  modelling  of  the  plant  and  the  specifications  and then in the next step, synchronized composition between two  models  gets  the  controlled  model.  Generally,  due  to  uncontrollable and unobservable transitions, it is necessary to change this synchronized model. There are many approaches for  resolving  this  problem.   The   final   model   is   composed   of   the supervisor and the uncontrolled model of the plant. The next step is implementing this controller.
+
+%automatic  code  generation  and  code  execution;  this would  allow  hardware to  be  interfaced  with  the  soft-ware,  software  verification,  and  controller  implemen-tation;
+
+
+%\section{Objetivos}
+
+Os objetivos deste trabalho est\~ao divididos em objetivo geral e objetivos espec\'ificos.
+
+\subsection{Objetivo Geral}
+
+Desenvolver uma proposta de interface para desenvolvimento de projetos de automa\c{c}\~ao. A qual converte, em c\'odigos implement\'aveis, a l\'ogica de controle sintetizada a partir de uma Rede de Petri.
+
+%\subsection{Objetivos Espe\c{c}\'ificos}
+
+\begin{itemize}
+	\item Realizar estudo de formalismos de representa\c{c}\~ao de SEDs (Redes de Petri e Teoria de Controle Supervis\'orio).
+	
+	\item Realizar estudo de programa\c{c}\~ao de CLPs e FPGAs.
+	
+	\item Desenvolver um algoritmo de convers\~ao visando a compatibilidade de arquivos manipulados por softwares utilizados no processo de s\'intese de l\'ogica de controle.
+	
+	\item Desenvolver um algoritmo para a gera\c{c}\~ao de c\'odigos implement\'aveis.
+	
+	\item Implementar os algoritmos desenvolvidos em uma plataforma computacional.
+	
+	\item Desenvolver uma interface intuitiva para guiar usu\'arios no desenvolvimento de projetos de automa\c{c}\~ao.
+	
+	\item Analisar os resultados obtidos da implanta\c{c}\~ao desta proposta em um problema conhecido.
+	%\item Validar a ferramenta comparando os resultados com outras metodologias de convers\~ao. 
+\end{itemize} 
