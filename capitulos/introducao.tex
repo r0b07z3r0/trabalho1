@@ -70,37 +70,3 @@ Em \cite{lealqueiroz2017} se discute que no \^ambito industrial o desenvolviment
 O principal problema com este tipo de abordagem informal \'e de n\~ao facilitar os testes de controle em sua completude, clareza e consist\^encia. Um estudo de pr\'aticas ind\'ustriais realizado por \cite{colla2006}, apontou que, em sua maioria, ind\'ustrias n\~ao  utilizam de nenhum m\'etodo ou ferramenta estruturada para o desenvolvimento de controle de sistemas industriais. O estudo tamb\'em revela que a pr\'atica mais usada se baseia na forma de narrativas, ignorando fases do projeto.
 
 \cite{hugomestrado} afirma que sem um m\'etodo formal de valida\c{c}\~ao um sistema pode alcan\c{c}ar um estado n\~ao validado com consequ\^encias imprevis\'iveis e potencialmente desastrosas. O mesmo autor cita que a falta desta valida\c{c}\~ao pode gerar viola\c{c}\~oes nas especifica\c{c}\~oes de funcionamento e de seguran\c{c}a do processo.
-
-%Falar o que 'e especificacao informal na introducao e defini-la como litz a define 
-
-%sem sentido segundo Vallim
-%A aplica\c{c}\~ao de um m\'etodo formal para a s\'intese do controlador \'e crucial devido a sua confiabilidade, seguran\c{c}a e redu\c{c}\~ao do tempo de desenvolvimento. Se tratando de ind\'ustrias onde o CLP \'e de grande import\^ancia, a lacuna entre o mundo da modelagem ass\'incrona e o mundo dos controladores l\'ogicos s\'incronos deve ser superada \cite{fabian}.
-
-%Em sua concep\c{c}~ao, Litz define o termo informal como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente de forma bem definida.
-Segundo "\textit{Petri Net Tools and Software}", um reposit\'orio de dados sobre softwares na \'area de Redes de Petri, h\'a poucas ferramentas capazes de gerar c\'odigos implement\'aveis e nenhuma combina Redes de Petri e Teoria de Controle Supervis\'orio. O foco deste trabalho contribui para redu\c{c}\~ao da lacuna entre teoria e pr\'atica na \'area de automa\c{c}\~ao apresentando uma proposta para automatiza\c{c}\~ao do processo de s\'intese de um c\'odigo que implemente uma l\'ogica de controle obtida a partir de um processo de s\'intese formal.
-
-%Desenvolver e implementar l\'ogica de controle para sistemas industriais automatizados n\~ao \'e uma tarefa trivial\cite{leal2009}. H\'a falta de um dispositivo que fa\c{c}a a verifica\c{c}\~ao das boas propriedades da modelagem usando Redes de Petri e a converte em c\'odigo implement\'avel impede um r\'apido avan\c{c}o da elabora\c{c}~ao da modelagem para a implanta\c{c}~ao. Quando se trabalha com sistemas reais de grandes propor\c{c}\~oes, alguns problemas aparecem, como por exemplo, grande n\'umero de estados\cite{leductese}. Um n\'umero demasiadamente grande de estados para a sintetiza\c{c}\~ao se torna invi\'avel caso este n\~ao seja feito de forma autom\'atica.
-
-
-%When working with large, real systems several problems quickly arise. The Ørstis \How does the DES plant model actually correspond to the real plant?" \How do events mapto actual occurrences in the plant, and in particular, how do controllable events and their disablemen  t actually translate to the real plant?" The second problem is the inhibiting eÆect of the combinatorial explosion for complex plants.  For realistic plants, the plant model can quickly become quite large (easily greater than 10 16  states) and thus exceed the capabilit y of current software.New metho ds to handle largemodelsmust be developed. 
-
-
-%Geord Frey e Lothar Litz discute os inconveniente da especifica\c{c}\~ao informal do controlador. Eles definem o termo "informal" como aquilo que n\~ao \'e rigorosamente composto, sintaticamente e semanticamente de forma bem definida. Os autores apontam que a especifica\c{c}\~ao informal consiste na descri\c{c}\~ao dos processos n\~ao control\'aveis e requerimentos para o sistema controlado. E o principal problema com este tipo de especifica\c{c}\~ao \'e de n\~ao facilitar os testes de controle em sua completude, clareza e consist\^encia \cite{Litz2000}.  
-
-
-%\section{Justificativa}
-
-%Qual 'e a vantagem de ter isso
-%Aproveitamento da teoria para projetos no campo
-%Significa mais eficiencia e reducao de tempo
-%Maior qualidade de controle e confiabilidade
-%Diminuir riscos
-
-A Teoria de Controle Supervis\'orio \'e uma ferramenta apropriada para a s\'intese da l\'ogica de controle para sistemas automatizados \cite{leal2009}. Os mesmos autores confirmam que a TCS garante o alcance de uma l\'ogica de controle \'otima, isto \'e, uma l\'ogica minimamente restritiva e sem bloqueios que atenda as especifica\c{c}\~oes de controle.
-
-As Redes de Petri s\~ao adequadas para a modelagem de controladores de sistemas de automa\c{c}\~ao \cite{gomes2007}. A RdP possui vizualiza\c{c}\~ao gr\'afica, o que permite uma sintaxe e sem\^antica bem definida, como tamb\'em a modelagem concorrente e s\'incrona expl\'icita e leg\'ivel.
-
-Segundo \cite{Litz2000} h\'a v\'arias raz\~oes para a aplica\c{c}\~ao de m\'etodos formais. As principais raz\~oes s\~ao: aumento da complexidade de problemas, demanda por redu\c{c}\~ao do tempo de desenvolvimento, demanda por maior qualidade e demanda por confiabilidade dos sistemas.
-
-Em rela\c{c}\~ao \`a gera\c{c}\~ao autom\'atica de c\'odigos, o relat\'orio do "\textit{Workshop on Logic Control for Manufacturing Systems}" \space aponta que os t\'opicos para pesquisas futuras incluem o aprimoramento de programas para projetos de l\'ogica de controle e implementação atrav\'es de diagn\'osticos integrados. Como tamb\'em melhoria em inferfaces homem-m\'aquina e gera\c{c}\~ao autom\'atica de c\'odigos \cite{workshop2000}. \cite{karenides} cita que estudantes que desenvolvem pesquisa em SEDs desejam que um software de modelagem contenha um gerador e executor autom\'atico de c\'odigos, e que este proporcione uma interface entre software, hardware e a implementa\c{c}\~ao do controlador.
-
